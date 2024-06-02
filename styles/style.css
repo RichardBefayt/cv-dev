@@ -1,0 +1,231 @@
+/***** Général *****/
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fill, 180px);
+    padding: 0 2rem;
+}
+
+
+/***** En-tête *****/
+header {
+    grid-area: 1 / 1 / 2 / 6;
+    display: flex;
+    align-items: center;
+    height: 180px;
+    background-color: rgba(75, 136, 136, 0.116);
+    border-bottom: 1px solid black;
+}
+
+.header-img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin-left: 5%;
+}
+
+.header-img img {
+    width: 70%;
+    border-radius: 50%;
+}
+
+.header-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-titles h3 {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/***** Côté *****/
+aside {
+    grid-area: 2 / 1 / 6 / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: fit-content(1fr);
+    padding: 7px;
+    background-color: rgba(241, 109, 131, 0.116);
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.aside-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+aside h3 {
+    margin-bottom: 0.5em;
+}
+
+.aside-category-items {
+    /* gap: 15px; */
+    line-height: 25px;
+}
+
+.contact {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.formations {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.technos {
+    grid-area: 3 / 1 / 5 / 2;
+}
+
+.technos i {
+    font-size: 1.3rem;
+}
+
+.skills {
+    grid-area: 3 / 2 / 5 / 3;
+}
+
+.personal {
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+.personal-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/***** Centre *****/
+main {
+    grid-area: 2 / 2 / 6 / 6;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.main-intro {
+    line-height: 1.5em;
+}
+
+.main-creations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
+}
+
+.main-creation {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(238, 231, 231, 0.5);
+}
+
+.left,
+.right {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+}
+
+.creation-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* border: 1px dashed black; */
+}
+
+.creation-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 66.67%;
+}
+
+.creation-description h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.creation-technos {
+    margin-bottom: 10px;
+    /* border: 1px dashed rgb(75, 177, 27); */
+}
+
+canvas {
+    max-height: 150px;
+}
+
+.creation-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/***** Pied de page *****/
+footer {
+    grid-area: 6 / 1 / 7 / 6;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+footer h3 {
+    text-align: center;
+}
+
+.all,
+.jobs {
+    display: flex;
+}
+
+.job {
+    border: 1px dashed black;
+}
+
+.passions {
+    background-color: rgba(250, 172, 172, 0.116);
+    border: 1px solid black;
+}
+
+.others {
+    background-color: rgba(252, 252, 168, 0.116);
+    border: 1px solid black;
+}

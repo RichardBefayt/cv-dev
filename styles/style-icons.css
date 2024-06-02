@@ -1,0 +1,45 @@
+/* Contact */
+.fa-mobile-button {
+    color: rgb(29, 30, 31);
+}
+
+.fa-location-dot {
+    color: red;
+}
+
+.fa-envelope {
+    color: rgb(130, 155, 238);
+}
+
+/* Technos */
+.fa-html5 {
+    color: #f06627;
+}
+
+.fa-css3-alt {
+    color: #004ce8;
+}
+
+.fa-sass {
+    color: #ca659a;
+}
+
+.fa-js {
+    color: #ffde25;
+}
+
+.fa-node {
+    color: #549e43;
+}
+
+.fa-react {
+    color: #61dafb;
+}
+
+.fa-git-alt {
+    color: #df4c37;
+}
+
+.fa-github {
+    color: #1b1f23;
+}

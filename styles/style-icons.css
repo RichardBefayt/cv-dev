@@ -13,11 +13,11 @@
 
 /* Technos */
 .fa-html5 {
-    color: #f06627;
+    color: rgb(240, 102, 39);
 }
 
 .fa-css3-alt {
-    color: #004ce8;
+    color: rgb(0, 76, 232);
 }
 
 .fa-sass {
@@ -25,7 +25,7 @@
 }
 
 .fa-js {
-    color: #ffde25;
+    color: rgb(255, 222, 37);
 }
 
 .fa-node {

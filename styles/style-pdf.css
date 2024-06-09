@@ -1,0 +1,12 @@
+.scale-cv {
+    --h1-font-size: 0.938rem;
+    --h2-font-size: 0.938rem;
+    --h3-font-size: 0.875rem;
+    --smaller-font-size: 0.688rem;
+    --small-font-size: 0.75rem;
+    --normal-font-size: 0.813rem;
+}
+
+.generate-pdf {
+    display: none;
+}

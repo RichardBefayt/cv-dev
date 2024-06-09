@@ -2,263 +2,306 @@
 <html lang="fr">
     <head>
     <title>CV Développeur Front-End</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles/style-reset.css">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-icons.css">
+    <link rel="stylesheet" href="styles/style-pdf.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./scripts/script-chart.js" defer></script>
+    <script src="./scripts/html2pdf.bundle.min.js" defer></script>
     <script src="./scripts/script.js" defer></script>
 </head>
-<body>
+<body id="area-cv">
     <header>
-        <div class="header-img">
-            <img src="./pictures/Profile/profile.png" alt="Photo de profil">
-        </div>
+        <div class="header-bg">
+            <div class="header-img">
+                <img src="./pictures/Profile/profile.png" alt="Photo de profil">
+            </div>
 
-        <div class="header-titles">
-            <h1>Richard BEFAYT</h1>
-            <h2>Développeur Web Front-End</h2>
-            <h3>Portfolio : https://richard-befayt.netlify.app/</h3>
+            <div class="header-titles">
+                <h1>Richard BEFAYT</h1>
+                <h2>Développeur Web Front-End</h2>
+                <h3>Portfolio : https://richard-befayt.netlify.app/</h3>
+            </div>
+
+            <!-- <div class="header-link-pdf">
+                <i class="fa-solid fa-file-pdf generate-pdf" title="Générer le PDF" id="resume-btn"></i>
+            </div> -->
         </div>
     </header>
 
-    <aside>
-        <section class="aside-category contact">
-            <h3>Contact</h3>
-            <div class="aside-category-items contact-items">
-                <p class="contact-mobile"><i class="fa-solid fa-mobile-button"></i> 06 35 02 11 58</p>
-                <p class="contact-address"><i class="fa-solid fa-location-dot"></i> 59 av Roger Guichard - 95610 Éragny</p>
-                <p class="contact-mail"><i class="fa-solid fa-envelope"></i> richardbefaytdev@gmail.com</p>
-            </div>
-        </section>
-
-        <section class="aside-category formations">
-            <h3>Formations</h3>
-            <div class="aside-category-items formations-items">
-                <p><i class="fa-solid fa-school-flag"></i> Ecole : O'clock</p>
-                <p><i class="fa-solid fa-chalkboard"></i> Cours en ligne</p>
-                <p><i class="fa-solid fa-briefcase"></i> Projets personnels réalisés en solo</p>
-            </div>
-        </section>
-
-        <section class="aside-category technos">
-            <h3>Technos</h3>
-            <div class="aside-category-items technos-items">
-                <p><i class="fa-brands fa-html5"></i></p>
-                <p><i class="fa-brands fa-css3-alt"></i> & <i class="fa-brands fa-sass"></i></p>
-                <p><i class="fa-brands fa-js"></i></p>
-                <p><i class="fa-brands fa-node"></i></p>
-                <p><i class="fa-brands fa-react"></i></p>
-                <p><i class="fa-brands fa-git-alt"></i> & <i class="fa-brands fa-github"></i></p>
-            </div>
-        </section>
-
-        <section class="aside-category skills">
-            <h3>Compétences</h3>
-            <div class="aside-category-items skills-items">
-                <p>Organisé</p>
-                <p>Persévérant</p>
-                <p>Orienté solution</p>
-                <p>Autonome</p>
-                <p>Créatif</p>
-                <p>Travail en équipe</p>
-            </div>
-        </section>
-        
-        <section class="aside-category personal">
-            <h3>Loisirs</h3>
-            <div class="aside-category-items personal-items">
-                <p><i class="fa-solid fa-film"></i> Cinéma</p>
-                <p><i class="fa-solid fa-motorcycle"></i> Moto</p>
-                <p><i class="fa-solid fa-gamepad"></i> Jeux Vidéo</p>
-                <p><i class="fa-solid fa-robot"></i> Intelligence Artificielle</p>
-                <p><i class="fa-solid fa-timeline"></i> Histoire</p>
-            </div>
-        </section>
-    </aside>
-
     <main>
-        <section class="main-intro">
-            <h3>A Propos</h3>
-            <p>Passionné par la création et ayant débuté ma carrière dans le cinéma, j'ai découvert dans le développement web une nouvelle façon d'exercer mes talents en écriture, composition et résolution de problèmes. Aujourd'hui, en tant que Développeur Web Front-End Junior, je suis animé par la possibilité de créer des expériences utilisateur captivantes et intuitives.</p>
-        </section>
+        <aside>
+            <div class="aside-category contact">
+                <h3>Contact</h3>
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-mobile-button"></i>
+                    <p class="contact-mobile">06 35 02 11 58</p>
+                </div>
+                    
+                    <div class="aside-category-items">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="contact-adress">
+                            <p>59 av Roger Guichard</p>
+                            <p>95610 Éragny</p>
+                        </div>
+                    </div>
 
-        <section class="main-creations">
-            <div class="main-creation">
+                    <div class="aside-category-items">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p class="contact-mail">richardbefaytdev@gmail.com</p>
+                    </div>
+            </div>
 
-                <div class="left">
-                    <div class="creation-img">
+            <div class="aside-category formations">
+                <h3>Formations</h3>
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-school-flag"></i>
+                    <p>Ecole : O'clock</p>
+                </div>
+
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-chalkboard"></i>
+                    <p>Cours en ligne</p>
+                </div>
+
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p>Projets personnels réalisés en solo</p>
+                </div>
+            </div>
+
+            <div class="progress">
+                <table>
+                    <tr>
+                        <th>Technos</th>
+                        <th>Compétences</th>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-html5"></i></td>
+                        <td>Organisé</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-css3-alt"></i> & <i class="fa-brands fa-sass"></i></td>
+                        <td>Persévérant</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-js"></i></td>
+                        <td>Orienté solution</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-node"></i></td>
+                        <td>Autonome</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-react"></i></td>
+                        <td>Créatif</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-git-alt"></i> & <i class="fa-brands fa-github"></i></td>
+                        <td>Travail en équipe</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="aside-category personal">
+                <h3>Loisirs</h3>
+                <div class="aside-category-items personal-items">
+                    <p><i class="fa-solid fa-film"></i> Cinéma</p>
+                </div>
+
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <p>Moto</p>
+                </div>
+                
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <p>Jeux Vidéo</p>    
+                </div>
+                
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-robot"></i>
+                    <p>Intelligence Artificielle</p>    
+                </div>
+                
+                <div class="aside-category-items">
+                    <i class="fa-solid fa-timeline"></i>
+                    <p>Histoire</p>    
+                </div>
+            </div>
+        </aside>
+
+        <div class="center">
+            <section class="intro">
+                <h3>A Propos</h3>
+                <p>Passionné par la création et ayant débuté ma carrière dans le cinéma, j'ai découvert dans le développement web une nouvelle façon de m'exercer dans l'écriture, la composition et résolution de problèmes. Aujourd'hui, en tant que Front-End Junior, je suis animé par la possibilité de créer des expériences utilisateur captivantes et intuitives.</p>
+            </section>
+
+            <section class="projects">
+                <article>
+                    <div class="project-img-container">
                         <img src="./pictures/Projects/bs-pizza.jpg" alt="">
                     </div>
-                </div>
-                
-                <div class="right">
-                    <div class="creation-description">
-                        <h3>BS Pizza</h3>
-                        <p>Objectif : Réalisation d'un site vitrine pour un client IRL.</p>
-                    </div>
-    
-                    <div class="creation-technos">
-                        <canvas id="pizzaChart"></canvas>
-                        <div class="creation-links">
-                            <div class="creation-link-code">
-                                <a href="https://github.com/RichardBefayt/Bs-Pizza">
-                                    <i class="fa-solid fa-code"></i>
-                                </a>
-                            </div>
+                    
+                    <div class="project-description">
+                        <div class="project-titles">
+                            <h3>BS Pizza</h3>
+                            <p>Objectif : Site vitrine pour un client IRL.</p>
+                        </div>
         
-                            <div class="creation-link-project">
+                        <div class="project-technos">
+                            <div class="project-chart">
+                                <canvas id="pizzaChart"></canvas>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/RichardBefayt/Bs-Pizza">
+                                    Code source
+                                </a>
+    
                                 <a href="https://bs-pizza.netlify.app/">
-                                    <i class="fa-solid fa-desktop"></i>
+                                    Projet
                                 </a>
                             </div>
                         </div>
+
                     </div>
-                </div>
-
-            </div>
-            
-            <div class="main-creation">
-
-                <div class="left">
-                    <div class="creation-img">
+                </article>
+                
+                <article>
+                    <div class="project-img-container">
                         <img src="./pictures/Projects/restaurant.jpg" alt="">
                     </div>    
-                </div>
-                
-                <div class="right">
-                    <div class="creation-description">
-                        <h3>L'Art Culinaire</h3>
-                        <p>Objectif : Réalisation d'un restaurant fictif avec animations, formulaire et dates en JS.</p>
-                    </div>
-    
-                    <div class="creation-technos">
-                        <canvas id="restoChart"></canvas>
-                        <div class="creation-links">
-                            <div class="creation-link-code">
-                                <a href="https://github.com/RichardBefayt/l-art-culinaire">
-                                    <i class="fa-solid fa-code"></i>
-                                </a>
-                            </div>
+                    
+                    <div class="project-description">
+                        <div class="project-titles">
+                            <h3>L'Art Culinaire</h3>
+                            <p>Objectif : Restaurant fictif avec animations, formulaire, dates...</p>
+                        </div>
         
-                            <div class="creation-link-project">
+                        <div class="project-technos">
+                            <div class="project-chart">
+                                <canvas id="restoChart"></canvas>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/RichardBefayt/l-art-culinaire">
+                                    Code source
+                                </a>
+
                                 <a href="https://lartculinaire.netlify.app/">
-                                    <i class="fa-solid fa-desktop"></i>
+                                    Projet
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-            </div>
-            
-            <div class="main-creation">
-
-                <div class="left">
-                    <div class="creation-img">
-                        <img src="./pictures/Projects/VR.png" alt="">
                     </div>
-                </div>
+                </article>
                 
-                <div class="right">
-                    <div class="creation-description">
-                        <h3>VirtualX</h3>
-                        <p>Objectif : Réalisation d'un site marchand fictif avec panier, favoris, login...</p>
+                <article>
+                    <div class="project-img-container">
+                        <img src="./pictures/Projects/VR.jpg" alt="">
                     </div>
-    
-                    <div class="creation-technos">
-                        <canvas id="vrChart"></canvas>
-                        <div class="creation-links">
-                            <div class="creation-link-code">
-                                <a href="https://virtualx.netlify.app/">
-                                    <i class="fa-solid fa-code"></i>
-                                </a>
-                            </div>
+                    
+                    <div class="project-description">
+                        <div class="project-titles">
+                            <h3>VirtualX</h3>
+                            <p>Objectif : E-commerce fictif avec panier, favoris, login...</p>
+                        </div>
         
-                            <div class="creation-link-project">
+                        <div class="project-technos">
+                            <div class="project-chart">
+                                <canvas id="vrChart"></canvas>
+                            </div>
+                            
+                            <div class="project-links">
                                 <a href="https://github.com/RichardBefayt/VirtualX">
-                                    <i class="fa-solid fa-desktop"></i>
+                                    Code source
+                                </a>
+
+                                <a href="https://virtualx.netlify.app/">
+                                    Projet
                                 </a>
                             </div>
-                        </div>    
-                    </div>
-                </div>
+                        </div>
 
-            </div>
-            
-        </section>
+                    </div>
+                </article>
+            </section>
+
+        </div>
     </main>
-    
+--
     <footer>
         <h2>Expériences professionnelles</h2>
 
         <div class="all">
-            <div class="passions">
+            <div class="all-categories passions">
                 <h3>Passions</h3>
                 <div class="jobs">
         
-                    <div class="job">
-                        <div class="job-img">
-                            <img src="" alt="">
+                    <article class="job">
+                        <div class="job-img cinema">
+                            <div class="job-formation">
+                                <h4>Cinéma</h4>
+                                <p>Formation : EICAR - Réalisation de courts métrages</p>
+                                <p>Expérience : Assistant régisseur & Électro</p>
+                            </div>
                         </div>
-                        <div class="job-formation">
-                            <h4>Cinéma</h4>
-                            <p>Formation : EICAR - Réalisation de courts métrages</p>
-                            <p>Expérience : Assistant régisseur & Électro</p>
-                        </div>
-                    </div>
+                    </article>
         
-                    <div class="job">
-                        <div class="job-img">
-                            <img src="" alt="">
+                    <article class="job">
+                        <div class="job-img rescue">
+                            <div class="job-formation">
+                                <h4>Secourisme</h4>
+                                <p>Formation : CSP d'Osny (95)</p>
+                                <p>Expérience : Sapeur-pompier volontaire - CS Vigny (95)</p>
+                            </div>
                         </div>
-                        <div class="job-formation">
-                            <h4>Secourisme</h4>
-                            <p>Formation : CSP d'Osny (95)</p>
-                            <p>Expérience : Sapeur pompier volontaire - CS Vigny (95)</p>
-                        </div>
-                    </div>
+                            
+                    </article>
         
-                    <div class="job">
-                        <div class="job-img">
-                            <img src="" alt="">
+                    <article class="job">
+                        <div class="job-img coaching">
+                            <div class="job-formation">
+                                <h4>Coaching</h4>
+                                <p>Formation : École Supérieure de Coaching</p>
+                                <p>Expérience : Coach professionnel</p>
+                            </div>
                         </div>
-                        <div class="job-formation">
-                            <h4>Coaching</h4>
-                            <p>Formation : École Supérieure de Coaching</p>
-                            <p>Expérience : Coach professionnel</p>
-                        </div>
-                    </div>
+                    </article>
         
                 </div>
             </div>
     
-            <div class="others">
+            <div class="all-categories others">
                 <h3>Autres</h3>
                 <div class="jobs">
-                    <div class="job">
-                        <div class="job-img">
-                            <img src="" alt="">
+                    <article class="job">
+                        <div class="job-img school">
+                            <div class="job-formation">
+                                <h4>Éducation</h4>
+                                <p>Formation : BAFA</p>
+                                <p>Expériences : Animateur, Surveillant, Surveillant Général</p>
+                            </div>
                         </div>
-                        <div class="job-formation">
-                            <h4>Éducation</h4>
-                            <p>Formation : BAFA</p>
-                            <p>Expériences : Animateur, Surveillant, Surveillant Général</p>
-                        </div>
-                    </div>
+                    </article>
                     
-                    <div class="job">
-                        <div class="job-img">
-                            <img src="" alt="">
+                    <article class="job">
+                        <div class="job-img shop">
+                            <div class="job-formation">
+                                <h4>Commerce</h4>
+                                <p>Expériences : vendeur, responsable de magasin</p>
+                            </div>
                         </div>
-                        <div class="job-formation">
-                            <h4>Commerce</h4>
-                            <p>Expériences : vendeur, responsable de magasin</p>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
 

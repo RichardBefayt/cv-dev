@@ -15,15 +15,10 @@ let pizzaData = {
 }
 
 let pizzaChart = new Chart(ctx1, {
-    type: "bar",
+    type: "doughnut",
     data: pizzaData,
     options: {
         responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true,
-            }
-        }
     }
 })
 
@@ -44,15 +39,10 @@ let restoData = {
 }
 
 let restoChart = new Chart(ctx2, {
-    type: "bar",
+    type: "doughnut",
     data: restoData,
     options: {
         responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true,
-            }
-        }
     }
 })
 
@@ -73,14 +63,9 @@ let vrData = {
 }
 
 let vrChart = new Chart(ctx3, {
-    type: "bar",
+    type: "doughnut",
     data: vrData,
     options: {
         responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true,
-            }
-        }
     }
 })

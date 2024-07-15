@@ -6,23 +6,19 @@
 
 body {
     font-size: 1.15rem;
-    margin: 0 auto;
-    width: 100%;
-    /* max-width: 210mm;  */
-    /* Limite la largeur pour correspondre à une feuille A4 */
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h3 {
     margin-bottom: 7px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 a {
@@ -34,8 +30,8 @@ a:visited {
 }
 
 img {
-    display: block;
-    max-width: 100%;
+    /* display: block;
+    max-width: 100%; */
 }
 
 aside,
@@ -46,39 +42,4 @@ footer {
 
 i {
     margin: 0 7px;
-}
-
-/* Ajouter des styles spécifiques pour l'impression */
-@media print {
-    body {
-        width: 100%;
-        max-width: 210mm;
-    }
-
-    header,
-    main,
-    footer {
-        display: block;
-        page-break-inside: avoid;
-    }
-
-    .header-bg {
-        text-align: center;
-    }
-
-    .header-img img {
-        width: 50%;
-    }
-
-    .project-img-container,
-    .project-description {
-        display: block;
-        width: 100%;
-    }
-
-    .project-img-container img,
-    canvas {
-        max-width: 100%;
-        height: auto;
-    }
 }

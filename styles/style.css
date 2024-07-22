@@ -1,3 +1,23 @@
+.body-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../pictures/Projects/CV.jpg) no-repeat center/cover;
+    filter: contrast(15%);
+    z-index: -1;
+}
+
+.print-container {
+    width: 1200px;
+    height: auto;
+    padding: 10mm;
+    box-sizing: border-box;
+    background-color: white;
+    margin: auto;
+}
+
 /***** En-tête *****/
 header {
     display: flex;
@@ -7,7 +27,6 @@ header {
 }
 
 .header-bg {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,17 +34,6 @@ header {
     padding: 10px;
     text-align: center;
     color: black;   
-}
-.header-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 91%;
-    background: url("../pictures/Profile/header.jpg") center/cover no-repeat;
-    filter: opacity(0.1);
-    z-index: -1;
 }
 
 .header-img {
@@ -155,14 +163,18 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33%;
+    width: 30%;
     height: 100%;
+    border: 1px solid rgba(175, 175, 175, 0.5);
+    border-radius: 10px;
+    box-shadow: 9px 9px 4px 0 rgba(70, 70, 70, 0.308);
 }
 
 .project-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .project-description {
@@ -208,6 +220,7 @@ canvas {
     color: #fff;
     text-align: center;
     background-color: #8d2a79;
+    box-shadow: 9px 9px 4px 0 rgba(70, 70, 70, 0.308);
 }
 
 /***** Pied de page *****/
@@ -231,6 +244,7 @@ footer h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .all {
@@ -241,23 +255,24 @@ footer h3 {
 .all-categories {
     width: 100%;
 }
-    
+
 .job {
-    height: 125px;
+    height: 140px;
+    font-size: 1.1rem;
     box-shadow: 9px 9px 4px 0 rgba(70, 70, 70, 0.308);
+    outline: 10px solid transparent; /* Utiliser outline pour l'espacement sans affecter la box-shadow */
 }
 
 .job-img {
-    position: relative; /* Pour positionner le pseudo-élément par rapport à ce conteneur */
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     height: auto;
-    margin-right: 10px;
     padding: 10px;
     text-align: left;
     color: white;
-    overflow: hidden; /* Pour s'assurer que le pseudo-élément ne dépasse pas */
+    overflow: hidden;
 }
 
 .job-img::before {
@@ -267,15 +282,15 @@ footer h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: inherit; /* Utiliser le même fond */
-    filter: brightness(33%); /* Assombrir l'image */
-    z-index: 1; /* Placer en dessous du texte mais au-dessus de l'image */
+    background: inherit; /* Utilise le même fond */
+    filter: brightness(33%);
+    z-index: 1;
     pointer-events: none; /* Pour permettre les interactions avec le contenu réel */
 }
 
 .job-formation {
     position: relative; /* Pour que le texte soit au-dessus du pseudo-élément */
-    z-index: 2; /* Placer au-dessus du pseudo-élément assombri */
+    z-index: 2;
 }
 
 .cinema {
@@ -296,4 +311,75 @@ footer h3 {
 
 .school {
     background: url("../pictures/XP/school.jpg") center/cover no-repeat;
+}
+
+@media print {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        font-size: 10pt;    
+    }
+    
+    h1 { 
+        font-size: 18pt; 
+    }
+
+    .body-bg {
+        display: none;
+    }
+
+    h2 { 
+        font-size: 14pt; 
+    }
+
+    h3 { 
+        font-size: 12pt; 
+    }
+    
+    .print-container {
+        box-shadow: none;
+        padding: 5mm;
+        width: 210mm;
+        height: 297mm;
+    }
+
+    header {
+        height: auto;
+        margin-bottom: 5mm;
+    }
+    .header-img {
+        width: 150px;
+        height: 150px;
+    }
+    main {
+        gap: 5mm;
+    }
+
+    .projects article {
+        height: auto;
+        margin-bottom: 5mm;
+    }
+
+    .project-description {
+        justify-content: center;
+    }
+
+    .project-chart {
+        width: 100%;
+    }
+
+    .project-links {
+        display: none;
+    }
+
+    .job-img::before {
+        background: #000;
+        opacity: 0.7;
+    }
+
+        
+        
 }

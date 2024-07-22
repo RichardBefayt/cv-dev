@@ -5,11 +5,12 @@
 }
 
 body {
+    position: relative;
     font-size: 1.15rem;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h2 {

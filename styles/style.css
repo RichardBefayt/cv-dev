@@ -11,8 +11,7 @@
 
 .print-container {
     width: 1200px;
-    height: auto;
-    padding: 10mm;
+    padding: 10px;
     box-sizing: border-box;
     background-color: white;
     margin: auto;
@@ -23,14 +22,7 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 180px;
-}
-
-.header-bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    height: auto;
     padding: 10px;
     text-align: center;
     color: black;   
@@ -59,22 +51,25 @@ header {
 }
 
 .header-titles h3 {
-    margin-top: 20px;
-    font-size: 0.9rem;
+    margin-top: 18px;
+    font-size: 1.1rem;
 }
 
 /***** Centre *****/
 main {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
 }
 
-/***** Barre latérale *****/
+/*** Barre latérale ***/
 aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 33%;
+    height: 100%;
 }
 
 .aside-category {
@@ -99,11 +94,16 @@ aside {
     line-height: 25px;
 }
 
+.formations {
+    margin-top: 25px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
+
 th, td {
     padding: 8px;
 }
@@ -123,7 +123,7 @@ table i {
     gap: 15px;
 }
 
-/***** Contenu principal *****/
+/*** Contenu principal ***/
 .center {
     display: flex;
     flex-direction: column;
@@ -133,6 +133,7 @@ table i {
 }
 
 .intro {
+    margin-bottom: 15px;
     line-height: 25px;
     text-align: justify;
 }
@@ -154,16 +155,11 @@ article {
     height: 270px;
 }
 
-.project-img,
-.project-description {
-    display: flex;
-}
-
 .project-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 25%;
     height: 100%;
     border: 1px solid rgba(175, 175, 175, 0.5);
     border-radius: 10px;
@@ -178,6 +174,7 @@ article {
 }
 
 .project-description {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 5px;
@@ -249,7 +246,6 @@ footer h3 {
 
 .all {
     flex-direction: column;
-    gap: 5px;
 }
 
 .all-categories {
@@ -311,75 +307,4 @@ footer h3 {
 
 .school {
     background: url("../pictures/XP/school.jpg") center/cover no-repeat;
-}
-
-@media print {
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: none;
-        font-size: 10pt;    
-    }
-    
-    h1 { 
-        font-size: 18pt; 
-    }
-
-    .body-bg {
-        display: none;
-    }
-
-    h2 { 
-        font-size: 14pt; 
-    }
-
-    h3 { 
-        font-size: 12pt; 
-    }
-    
-    .print-container {
-        box-shadow: none;
-        padding: 5mm;
-        width: 210mm;
-        height: 297mm;
-    }
-
-    header {
-        height: auto;
-        margin-bottom: 5mm;
-    }
-    .header-img {
-        width: 150px;
-        height: 150px;
-    }
-    main {
-        gap: 5mm;
-    }
-
-    .projects article {
-        height: auto;
-        margin-bottom: 5mm;
-    }
-
-    .project-description {
-        justify-content: center;
-    }
-
-    .project-chart {
-        width: 100%;
-    }
-
-    .project-links {
-        display: none;
-    }
-
-    .job-img::before {
-        background: #000;
-        opacity: 0.7;
-    }
-
-        
-        
 }

@@ -1,0 +1,35 @@
+@media screen and (max-width: 1199px) {
+    .print-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+    
+    .header-img {
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside, .center {
+        width: 100%;
+    }
+
+    .project-img-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+
+    .project-links {
+        display: none;
+    }
+}

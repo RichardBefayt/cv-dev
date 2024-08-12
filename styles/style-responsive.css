@@ -1,35 +1,130 @@
-@media screen and (max-width: 1199px) {
+/* Ajout d'un média query pour les très grands écrans */
+@media screen and (min-width: 1200px) {
+    .print-container {
+        width: 1000px; /* Ajustement de la largeur pour les très grands écrans */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    aside {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .print-container {
         width: 100%;
-        padding: 5px;
     }
-
+    
     header {
         flex-direction: column;
+        height: auto;
     }
     
     .header-img {
         justify-content: center;
+        margin: 0;
     }
-
+    
     main {
         flex-direction: column;
     }
 
-    aside, .center {
-        width: 100%;
+    .aside-category {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .projects article {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
     }
 
+    .article2 {
+        margin: 20px 0;
+    }
+    
     .project-img-container {
         width: 100%;
-        height: auto;
+        height: 200px;
     }
-
+    
     .project-description {
         width: 100%;
     }
+    
+    footer .all {
+        flex-direction: column;
+    }
+    
+    .job {
+        width: 100%;
+    }
+}
 
-    .project-links {
-        display: none;
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .print-container {
+        /* width: 95%; */
+    }
+    
+    .header-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .header-titles h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header-titles h2 {
+        font-size: 1.2rem;
+    }
+    
+    .header-titles h3 {
+        font-size: 0.9rem;
+    }
+
+    aside {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .aside-category {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    table i {
+        font-size: 1.2rem;
+    }
+    
+    .project-chart {
+        width: 100%;
+    }
+    
+    .project-links a {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .jobs {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .job {
+        height: 120px;
     }
 }

@@ -121,12 +121,6 @@ table i {
     font-size: 1.7rem;
 }
 
-.personal-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
 /*** Contenu principal ***/
 .center {
     display: flex;
@@ -290,6 +284,7 @@ footer h3 {
 
 .job-formation {
     position: relative; /* Pour que le texte soit au-dessus du pseudo-élément */
+    margin: auto 0;
     line-height: 25px;
     z-index: 2;
 }

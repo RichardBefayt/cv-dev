@@ -5,7 +5,7 @@ function createChartOptions(isMobile) {
         plugins: {
             legend: {
                 position: isMobile ? 'bottom' : 'right',
-                align: isMobile ? 'start' : 'center',
+                align:  isMobile ? 'start' : 'center',
                 labels: {
                     boxWidth: isMobile ? 10 : 20,
                     font: {
@@ -33,7 +33,7 @@ function createOrUpdateChart(ctx, data, chartInstance) {
         chartInstance.update();
     } else {
         return new Chart(ctx, {
-            type: "doughnut",
+            type: isMobile ? "bar" : "doughnut",
             data: data,
             options: options
         });

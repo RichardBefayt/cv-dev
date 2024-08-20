@@ -6,6 +6,7 @@ function createChartOptions(isMobile) {
             legend: {
                 position: isMobile ? 'bottom' : 'right',
                 align:  isMobile ? 'start' : 'center',
+                display: false,
                 labels: {
                     boxWidth: isMobile ? 10 : 20,
                     font: {
@@ -47,7 +48,6 @@ let pizzaChart, restoChart, vrChart;
 let pizzaData = {
     labels: ["HTML", "CSS", "JavaScript"],
     datasets: [{
-        label: "Technos utilisées (en %, source Github)",
         data: [66.1, 30.7, 3.2],
         backgroundColor: [
             "rgba(240, 102, 39, 1)",
@@ -61,7 +61,6 @@ let pizzaData = {
 let restoData = {
     labels: ["HTML", "CSS", "JavaScript"],
     datasets: [{
-        label: "Technos utilisées (en %, source Github)",
         data: [52.1, 37, 10.9],
         backgroundColor: [
             "rgba(240, 102, 39, 1)",
@@ -75,7 +74,6 @@ let restoData = {
 let vrData = {
     labels: ["HTML", "CSS", "JavaScript"],
     datasets: [{
-        label: "Technos utilisées (en %, source Github)",
         data: [51, 23, 26],
         backgroundColor: [
             "rgba(240, 102, 39, 1)",

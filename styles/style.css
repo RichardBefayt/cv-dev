@@ -50,9 +50,23 @@ header {
     margin: 0 auto;
 }
 
-.header-titles h3 {
-    margin-top: 18px;
+.header-links {
+    display: flex;
+    gap: 20px;
+}
+
+.header-links a {
+    cursor: pointer;
+    width: 150px;
+    margin-top: 10px;
+    padding: 10px;
     font-size: 1.1rem;
+    border: 2.5px solid #004ce8;
+    border-radius: 20px;
+}
+.header-links a:hover {
+    color: #fff;
+    background-color: #004ce8;
 }
 
 /***** Centre *****/
@@ -79,6 +93,14 @@ aside {
     align-items: flex-start;
 }
 
+.formations {
+    margin-top: 25px;
+}
+
+.progress {
+    text-align: left;
+}
+
 .aside-category-columns {
     display: flex;
     flex-wrap: wrap;
@@ -92,14 +114,6 @@ aside {
     justify-content: center;
     align-items: center;
     margin: 7px 0;
-}
-
-.formations {
-    margin-top: 25px;
-}
-
-.progress {
-    text-align: left;
 }
 
 table {
@@ -144,6 +158,10 @@ table i {
     gap: 10px;
     width: 100%;
     height: fit-content;
+}
+
+.projects-title {
+    text-align: left;
 }
 
 article {
@@ -211,11 +229,17 @@ canvas {
 .project-links a {
     cursor: pointer;
     width: 115px;
-    padding: 7px;
-    color: #fff;
+    padding: 10px;
     text-align: center;
-    background-color: #8d2a79;
+    color: #fff;
+    background-color: #1b1f23;
+    border-radius: 10px;
     box-shadow: 9px 9px 4px 0 rgba(70, 70, 70, 0.308);
+}
+
+.project-links a:hover {
+    color: #1b1f23;
+    background-color: #fff;
 }
 
 /***** Pied de page *****/
